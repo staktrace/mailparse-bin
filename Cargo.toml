@@ -1,0 +1,7 @@
+[package]
+name = "mailparse-bin"
+version = "0.1.0"
+authors = ["Kartikaya Gupta <kgupta@mozilla.com>"]
+
+[dependencies]
+mailparse = { path = "../mailparse" }

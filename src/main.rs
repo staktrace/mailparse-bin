@@ -10,7 +10,11 @@ fn dump(pfx: &str, pm: &mailparse::ParsedMail) {
         println!("  [{}] => [{}]", h.get_key().unwrap(), h.get_value().unwrap());
     }
     println!(">> Body from {} <<", pfx);
-    println!("  [{}]", pm.get_body().unwrap());
+    if pm.ctype.mimetype.starts_with("text/") {
+        println!("  [{}]", pm.get_body().unwrap());
+    } else {
+        println!("   (Body is binary type {}, {} bytes in length)", pm.ctype.mimetype, pm.get_body().unwrap().len());
+    }
     let mut c = 1;
     for s in &pm.subparts {
         println!(">> Subpart {} <<", c);

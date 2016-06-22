@@ -2,7 +2,7 @@
 name = "mailparse-bin"
 version = "0.1.0"
 dependencies = [
- "mailparse 0.1.0",
+ "mailparse 0.2.0",
 ]
 
 [[package]]
@@ -69,7 +69,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "mailparse"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "base64 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "encoding 0.2.32 (registry+https://github.com/rust-lang/crates.io-index)",
